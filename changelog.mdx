@@ -1,0 +1,135 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Alexander Anokhin's Documentation platform.
+---
+
+## Recent Updates
+
+Stay informed about the latest releases. Review changes, upgrade your instance, and prepare for upcoming features.
+
+<Update label="2024-11-15" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors in themes. Set your `{brandColor}` in the config file to match your identity, like `#3B82F6`.
+- Introduced `<Video>` and `<Iframe>` components for richer media embeds in documentation pages.
+
+## Improvements
+
+- Enhanced MDX parsing speed by 40% for large documentation sites.
+- Better error handling for invalid JSX in custom components.
+
+## Bug Fixes
+
+- Fixed nested code block rendering issues in `<Steps>` and `<Tabs>`.
+- Resolved frontmatter parsing errors caused by extra blank lines.
+
+</Update>
+
+<Update label="2024-10-20" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- New `<Columns>` component for responsive grid layouts with up to 5 columns.
+- Integrated Lucide icons library with over 1,000 options like `book-open` and `zap`.
+
+## Bug Fixes
+
+- Corrected attribute parsing for arrays like `tags={["feature", "bugfix"]}`.
+- Fixed self-closing component warnings in strict mode.
+
+## Improvements
+
+- Optimized image loading with `priority={true}` for above-the-fold content.
+
+</Update>
+
+<Update label="2024-09-25" description="v1.1.0" tags={["breaking", "feature"]}>
+
+## Breaking Changes
+
+- Removed deprecated `<Mermaid>` JSX component. Use standard ` ```mermaid ` code blocks instead.
+
+## New Features
+
+- Added `<ParamField>` and `<ResponseField>` for API documentation.
+- Support for `<Request>` and `<Response>` components with tabbed examples.
+
+## Improvements
+
+- Mandatory YAML frontmatter validation on all pages.
+
+</Update>
+
+## Upgrade Instructions
+
+Upgrade to the latest version to access new features and fixes. Follow these steps to update your documentation platform.
+
+<Callout kind="info">
+  Backup your `docs/` directory before upgrading.
+</Callout>
+
+<Steps>
+  <Step title="Check Compatibility" icon="check-circle">
+
+    Verify your current version:
+
+    ````bash
+    npm list alexander-anokhin-docs
+    ````
+
+  </Step>
+  <Step title="Install Latest" icon="download">
+
+    <CodeGroup tabs="npm,yarn">
+
+    ````bash
+    npm install alexander-anokhin-docs@latest
+    ````
+
+    ````bash
+    yarn add alexander-anokhin-docs@latest
+    ````
+
+    </CodeGroup>
+
+  </Step>
+  <Step title="Rebuild Site" icon="rocket">
+
+    ````bash
+    npm run build
+    ````
+
+    Deploy to your hosting provider.
+
+  </Step>
+</Steps>
+
+## Upcoming Changes
+
+Preview what's coming next to plan your documentation updates.
+
+<Columns cols={2}>
+  <Card title="v1.4.0 Preview" icon="zap" horizontal>
+    Real-time collaboration editing and AI-assisted content generation.
+  </Card>
+  <Card title="Enhanced Search" icon="search" horizontal>
+    Full-text search across all documentation pages with syntax highlighting.
+  </Card>
+</Columns>
+
+<Expandable title="Detailed Roadmap" default-open="false">
+
+| Milestone | Features | ETA |
+|-----------|----------|-----|
+| v1.4.0 | Collaboration, AI tools | Q4 2024 |
+| v1.5.0 | Multi-language support | Q1 2025 |
+| v2.0.0 | Full rewrite with React 19 | H1 2025 |
+
+Explore the [GitHub repository](https://github.com/alexanderanokhin/docs-platform) for full details.
+
+</Expandable>
+
+<Callout kind="tip">
+  Subscribe to release notifications via the dashboard at `https://dashboard.example.com/notifications` to stay ahead.
+</Callout>

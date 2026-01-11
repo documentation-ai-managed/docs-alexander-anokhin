@@ -1,0 +1,134 @@
+---
+title: Core Features
+description: Explore the essential capabilities of the documentation platform for efficient project management.
+---
+
+## Overview
+
+Alexander Anokhin's documentation platform empowers you to create, organize, and share project documentation seamlessly. You gain access to intuitive tools for page creation, structured organization, powerful search, and versatile export options. These core features streamline your workflow, ensuring your docs stay current and accessible.
+
+<Columns cols={3}>
+  <Card title="Page Creation" icon="edit-3" href="#page-creation">
+    Build pages with rich text, code, and embeds effortlessly.
+  </Card>
+  <Card title="Organization" icon="folder" href="#organization">
+    Structure docs hierarchically with folders and navigation.
+  </Card>
+  <Card title="Search & Filter" icon="search" href="#search">
+    Find content instantly across your entire space.
+  </Card>
+</Columns>
+
+## Page Creation and Editing Tools
+
+Create new pages directly from the dashboard or within folders. The editor supports markdown, MDX components, and real-time previews.
+
+<Steps>
+  <Step title="Start a New Page" icon="plus">
+    Click the `+ New Page` button in the sidebar.
+
+    Select a template like "Guide" or "API Reference".
+  </Step>
+  <Step title="Edit Content" icon="edit">
+    Use the WYSIWYG editor for text, headings, and lists.
+
+````markdown
+## Your Heading
+
+Add **bold** text, `inline code`, and lists:
+
+- Item 1
+- Item 2
+````
+  </Step>
+  <Step title="Add Components" icon="layers">
+    Insert components via slash commands: `/callout`, `/steps`.
+
+    Preview changes live before publishing.
+  </Step>
+  <Step title="Publish" icon="check-circle">
+    Save and publish. Pages auto-index for search.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable version history to track changes and revert edits easily.
+</Callout>
+
+## Document Organization and Folders
+
+Organize docs into folders for better navigation. Create nested structures mirroring your project hierarchy.
+
+<Tabs>
+  <Tab title="Manual Folders" icon="folder">
+    Right-click in the sidebar to create folders.
+
+    Drag pages between folders to reorganize.
+  </Tab>
+  <Tab title="Auto-Navigation" icon="menu">
+    Folders generate automatic sidebar menus.
+
+    Customize order with drag-and-drop.
+  </Tab>
+  <Tab title="Tags" icon="tag">
+    Assign tags like `api`, `guide` for cross-folder filtering.
+  </Tab>
+</Tabs>
+
+## Search and Filtering Options
+
+Locate any page or section quickly with global search. Filter by folder, tag, or content type.
+
+| Feature | Description | Shortcut |
+|---------|-------------|----------|
+| Full-Text Search | Matches titles, content, and code | `Ctrl+K` or `/` |
+| Filter by Folder | Narrow results to specific areas | Sidebar filters |
+| Advanced Filters | By tag, date modified, or type | Search dropdown |
+
+<Expandable title="Advanced Search Syntax" default-open="false">
+  Use operators like `tag:api` or `folder:guides` in the search bar.
+
+  Example: `"authentication" tag:guide` finds exact matches in tagged pages.
+</Expandable>
+
+## Export and Sharing Functionalities
+
+Share your docs publicly or export for offline use. Generate embeds for websites or APIs.
+
+<CodeGroup tabs="Markdown,HTML,PDF">
+  ````markdown
+  # Export as Markdown
+
+  ```bash
+  npx @alexanderanokhin/docs export /my-page.md
+  ```
+  ````
+
+  ````html
+  <!-- Embed in HTML -->
+  <iframe src="https://docs.alexanderanokhin.com/my-page" width="100%" height="600"></iframe>
+  ````
+
+  ````bash
+  # CLI Export to PDF
+  npx @alexanderanokhin/docs export --format=pdf /my-page.pdf
+  ```
+  ````
+</CodeGroup>
+
+<Callout kind="info">
+  Public sharing requires enabling the page's public toggle in settings.
+</Callout>
+
+## Next Steps
+
+Dive deeper with these resources:
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="zap" href="/quickstart">
+    Set up your first doc space.
+  </Card>
+  <Card title="Advanced Components" icon="puzzle" href="/components">
+    Master MDX integrations.
+  </Card>
+</Columns>

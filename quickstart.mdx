@@ -1,0 +1,137 @@
+---
+title: Quickstart Guide
+description: Set up your documentation space and create your first project in under 5 minutes.
+---
+
+## Prerequisites
+
+Before starting, ensure you have:
+
+- A modern web browser like Chrome or Firefox
+- An email address for account verification
+- Optional: A GitHub account for importing repositories
+
+<Callout kind="info">
+
+This quickstart takes less than 5 minutes. You'll create an account, set up your first project, and import sample content.
+
+</Callout>
+
+## Create Your Account
+
+Follow these steps to sign up for Alexander Anokhin's documentation space.
+
+<Steps>
+  <Step title="Visit the Dashboard" icon="monitor">
+    Navigate to `https://dashboard.example.com` in your browser.
+  </Step>
+  <Step title="Start Registration" icon="user-plus">
+    Click **Sign Up** and enter your email address and a strong password.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for a verification link from `noreply@example.com` and click it to activate your account.
+  </Step>
+</Steps>
+
+## Log In and Create Your First Project
+
+Once verified, access your documentation space.
+
+<Steps>
+  <Step title="Log In" icon="log-in">
+    Return to `https://dashboard.example.com` and enter your credentials.
+  </Step>
+  <Step title="Create Project" icon="plus">
+    Click **New Project**, enter a name like `My First Docs`, and select **Documentation Space** as the type.
+  </Step>
+  <Step title="Configure Basics" icon="settings">
+    Choose a slug like `my-first-docs` and set visibility to **Public**. Click **Create**.
+  </Step>
+</Steps>
+
+## Basic Interface Tour
+
+Your project dashboard includes these key sections:
+
+<Columns cols={3}>
+  <Card title="Editor" icon="edit-3" href="#editor">
+    Write and preview MDX content in real-time.
+  </Card>
+  <Card title="Pages" icon="file-text" href="#pages">
+    Organize your documentation into a navigable structure.
+  </Card>
+  <Card title="Settings" icon="settings" href="#settings">
+    Customize themes, integrations, and permissions.
+  </Card>
+</Columns>
+
+## Import Initial Content
+
+Add sample content using one of these methods.
+
+<Tabs>
+  <Tab title="Markdown Upload" icon="upload">
+    <Steps>
+      <Step title="Prepare File">
+        Create a `README.md` file with your content.
+      </Step>
+      <Step title="Upload">
+        In your project, go to **Import** > **Upload File** and select your MDX or Markdown file.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="GitHub Repo" icon="github">
+    Connect your GitHub for seamless imports.
+    
+    <CodeGroup tabs="CLI,API">
+    ````bash
+    gh repo clone yourusername/sample-docs -- --depth 1
+    cd sample-docs
+    # Push to your space via dashboard import
+    ````
+    ````javascript
+    // Use API to import
+    fetch('https://api.example.com/v1/projects/{PROJECT_ID}/import', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer YOUR_TOKEN' },
+      body: JSON.stringify({ repo: 'yourusername/sample-docs' })
+    });
+    ````
+    </CodeGroup>
+  </Tab>
+  <Tab title="API Import" icon="zap">
+    <ParamField path="projectId" param-type="string" required="true">
+      Your project identifier from the dashboard.
+    </ParamField>
+    
+    Use this curl example:
+    
+    ````bash
+    curl -X POST https://api.example.com/v1/import \
+      -H "Authorization: Bearer YOUR_API_KEY" \
+      -H "Content-Type: application/json" \
+      -d '{
+        "projectId": "my-first-docs",
+        "source": "markdown",
+        "content": "# Welcome\nYour first page content here."
+      }'
+    ````
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+
+Explore the full editor features next. Check [Introduction](/introduction) for concepts and [Authentication](/authentication) for API keys.
+
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Your Space" icon="brush" href="/configuration">
+    Adjust themes and add custom domains.
+  </Card>
+  <Card title="Advanced Integrations" icon="plug" href="/guide">
+    Set up webhooks and CI/CD pipelines.
+  </Card>
+</Columns>

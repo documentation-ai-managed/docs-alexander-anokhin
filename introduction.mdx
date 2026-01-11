@@ -1,0 +1,107 @@
+---
+title: Introduction to Alexander Anokhin's Documentation
+description: Welcome to your default documentation space for organizing and managing project documentation. Discover the overview, key features, and how to navigate this platform.
+---
+
+## Overview
+
+Welcome to Alexander Anokhin's documentation space. You use this platform to organize, manage, and share all your project documentation efficiently. It serves as your central hub for creating structured docs, collaborating with teams, and maintaining version control. Start by exploring the intuitive interface designed for developers, writers, and project managers.
+
+<Callout kind="info">
+This space supports MDX for rich, interactive documentation with components like tabs, steps, and cards.
+</Callout>
+
+## Key Features
+
+Alexander Anokhin's documentation offers powerful tools to streamline your workflow. Discover the core capabilities below.
+
+<Columns cols={3}>
+  <Card title="Organized Spaces" icon="folder" href="#navigation">
+    Create unlimited documentation spaces for different projects. Group related pages and maintain clean hierarchies.
+  </Card>
+  <Card title="Rich Editing" icon="edit-3" href="#editing">
+    Write in Markdown with MDX components for interactive elements like code tabs and expandable sections.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#versions">
+    Track changes, revert updates, and collaborate seamlessly with Git integration.
+  </Card>
+</Columns>
+
+## Quick Navigation Guide
+
+Get started navigating your documentation space in minutes. Follow these steps to set up and explore.
+
+<Steps>
+  <Step title="Access Your Space" icon="login">
+    Log in at `https://docs.example.com` using your credentials.
+  </Step>
+  <Step title="Create a Page" icon="plus">
+    Click the `+ New Page` button in the sidebar. Choose a title and start editing.
+  </Step>
+  <Step title="Organize Content" icon="layers">
+    Drag pages into folders or use the search bar to find content quickly.
+  </Step>
+  <Step title="Publish Changes" icon="upload">
+    Preview your docs, then hit `Publish` to make them live.
+  </Step>
+</Steps>
+
+## Brand Guidelines
+
+Maintain consistency with Alexander Anokhin's branding. Use the primary color `#3B82F6` for accents and links.
+
+<Tabs>
+  <Tab title="Colors" icon="palette">
+    | Element      | Hex Code     | Usage                  |
+    |--------------|--------------|------------------------|
+    | Primary      | `#3B82F6`   | Buttons, links         |
+    | Secondary    | `#1E40AF`   | Hover states           |
+    | Background   | `#FFFFFF`   | Main content areas     |
+    | Text         | `#111827`   | Body text              |
+  </Tab>
+  <Tab title="Typography" icon="type">
+    Use sans-serif fonts like Inter or system defaults. Headings: bold, 1.5x line height.
+  </Tab>
+  <Tab title="CSS Example" icon="code">
+````css
+:root {
+  --primary-color: #3B82F6;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+````
+  </Tab>
+</Tabs>
+
+## Example MDX Usage
+
+Enhance your pages with components. Here's a multi-language code example for embedding a simple script.
+
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+// Fetch documentation data
+async function loadDocs() {
+  const response = await fetch('/api/docs');
+  return response.json();
+}
+loadDocs();
+```
+
+```python
+# Fetch documentation data
+import requests
+
+response = requests.get('https://api.example.com/docs')
+docs = response.json()
+print(docs)
+```
+</CodeGroup>
+
+<Callout kind="tip">
+Ready to dive deeper? Check the [Quickstart](/quickstart) guide next or explore [Authentication](/authentication) for secure access.
+</Callout>
